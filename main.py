@@ -3,6 +3,8 @@ import logging
 from scripts.extract import extract_data
 from scripts.explore import explore_data
 from scripts.validate import validate_data
+from scripts.clean import clean_data
+
 from scripts.staging import create_staging
 
 logging.basicConfig(
@@ -20,6 +22,8 @@ def main():
     dataframe = explore_data(dataframe)
 
     dataframe = validate_data(dataframe)
+
+    dataframe = clean_data(dataframe)
 
     #dataframe = create_staging(dataframe)
 
