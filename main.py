@@ -4,8 +4,8 @@ from scripts.extract import extract_data
 from scripts.explore import explore_data
 from scripts.validate import validate_data
 from scripts.clean import clean_data
-
 from scripts.staging import create_staging
+from scripts.warehouse import create_warehouse
 
 logging.basicConfig(
     level=logging.INFO,
@@ -26,6 +26,8 @@ def main():
     dataframe = clean_data(dataframe)
 
     dataframe = create_staging(dataframe)
+
+    create_warehouse()
 
     print(dataframe.head())
 
