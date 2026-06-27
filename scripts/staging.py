@@ -8,6 +8,10 @@ def create_staging(dataframe):
 
     os.makedirs("data/staging", exist_ok=True)
 
+
+    print(os.getcwd())
+    print(os.path.abspath("data/staging/staging_superstore.csv"))
+
     dataframe.to_csv(
         "data/staging/staging_superstore.csv",
         index=False
