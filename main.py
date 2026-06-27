@@ -25,7 +25,7 @@ def main():
 
     dataframe = clean_data(dataframe)
 
-    #dataframe = create_staging(dataframe)
+    dataframe = create_staging(dataframe)
 
     print(dataframe.head())
 
